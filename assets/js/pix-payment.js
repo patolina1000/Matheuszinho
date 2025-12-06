@@ -217,16 +217,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSuccessState() {
         qrContainer.innerHTML = `<div style="color: #4caf50; text-align:center; padding: 20px;">
             <i class="fas fa-check-circle" style="font-size: 3rem; margin-bottom: 10px;"></i><br>
-            <strong>Pagamento Aprovado!</strong>
+            <strong>Pagamento Aprovado!</strong><br>
+            <span style="font-size: 14px; color: #666;">Redirecionando para o grupo VIP...</span>
         </div>`;
         elDesc.innerText = "Acesso liberado com sucesso.";
         
-        // Fechar modal após 3 segundos
+        // Fechar modal e redirecionar após 2 segundos
         setTimeout(() => {
-            closePixModal();
-            // Aqui você pode redirecionar o usuário ou desbloquear o conteúdo na página
-            alert("Conteúdo desbloqueado! (Simulação)");
-        }, 3000);
+            window.location.href = "https://t.me/+QJMZJ5BRAX5kNzEx";
+        }, 2000);
     }
 
     // --- EVENT LISTENERS ---
